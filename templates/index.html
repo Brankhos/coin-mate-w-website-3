@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="İstediğiniz ayarlamalar ile gelen sinyallerde alır veya satar">
+    <title>Başlangıç - CoinMate</title>
+
+
+    <link href="{{ url_for('static', filename='/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/css/fontawesome.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/css/main.css')}}" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div id="main" class="container-fluid h-100">
+
+        <div class="h-100 row align-items-center justify-content-center">
+            <div class="row align-items-center justify-content-center login-form-out">
+                <div class="row g-2 login-form-inside">
+                    <div id="login-form-labels" class="row justify-content-between">
+                        <div id="login-form-label-type" class="col-auto text-start">Giriş</div>
+                        <div id="login-form-label-error" class="col-auto text-end" style="display: none;">no error</div>
+                    </div>
+                    <input type="text" id="login-entry-username" class="filter-bg" placeholder="Kullanıcı adı">
+                    <div class="row passwd-merge">
+                        <input type="password" id="login-entry-pass" class="col-10 filter-bg" placeholder="Şifre">
+                        <button type="button" id="pass-eye" class="col-2 filter-bg"><i class="fa-solid fa-eye-slash"></i></button>
+                    </div>
+                    <input type="text" id="login-entry-pwd" class="filter-bg" placeholder="PWD" style="display: none;">
+                    <div id="login-form-buttons" class="row g-1 justify-content-between">
+                        <div class="col-auto login-form-button-background">
+                            <button id="login-form-button-left" class="filter-bg">Kayıt ol</button>
+                        </div>
+                        <div class="col-auto login-form-button-background">
+                            <input type="submit" id="login-form-button-right" class="filter-bg" value="Giriş yap">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="login-form-background">
+                </div>
+            </div>
+        </div>
+        <svg width="0" height="0" id="login-svg">
+            <defs>
+                <clipPath id="loginClip" transform="scale(0.0025, 0.0025)" clipPathUnits="objectBoundingBox">
+                    <path d="m200,6.5c-107.1316,0 -193.76453,86.6329 -193.76453,193.5c0,106.867 86.63293,193.5 193.49953,193.5c106.868,0 193.5,-86.633 193.5,-193.5c0,-106.8671 -86.632,-193.5 -193.5,-193.5l0.265,0zm0,5c-104.1057,0 -188.5,84.3943 -188.5,188.5c0,104.106 84.3943,188.5 188.5,188.5c104.106,0 188.5,-84.394 188.5,-188.5c0,-104.1057 -84.394,-188.5 -188.5,-188.5z" id="svg_1" clip-rule="evenodd"/>
+                    <path id="svg_2" d="m200,29.2355c-94.165,0 -170.5,76.3355 -170.5,170.4995c0,94.165 76.335,170.5 170.5,170.5c94.165,0 170.5,-76.335 170.5,-170.5c0,-94.164 -76.335,-170.4995 -170.5,-170.4995zm0,8.2645c-89.746,0 -162.5,72.754 -162.5,162.5c0,89.746 72.754,162.5 162.5,162.5c89.746,0 162.5,-72.754 162.5,-162.5c0,-89.746 -72.754,-162.5 -162.5,-162.5z" clip-rule="evenodd"/>
+                </clipPath>
+            </defs>
+        </svg>
+    </div>
+
+    <footer class="fixed-bottom">
+        <div class="container">
+            <div class="text-end">
+                &copy; Powered by <a href="https://github.com/Brankhos">Brankhos</a>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='/js/jquery-3.6.0.js')}}"></script>
+        <script src="{{ url_for('static', filename='/js/jquery.sparkline.js')}}"></script>
+        <script src="{{ url_for('static', filename='/js/bootstrap.bundle.js')}}"></script>
+        <script src="{{ url_for('static', filename='/js/main.js')}}"></script>
+
+    </footer>
+
+</body>
+
+</html>

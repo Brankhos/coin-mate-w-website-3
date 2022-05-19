@@ -1,0 +1,366 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: radial-gradient(circle, #0f143a, #000 100%);
+    color: #fff;
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 90deg;
+}
+
+@property --l-g-r-color-1,
+--l-g-r-color-2,
+--l-g-r-color-3,
+--l-g-r-color--4 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: red;
+}
+
+:root {
+    --a: 0deg;
+    --l-g-r-color-1: #ee7752;
+    --l-g-r-color-2: #e73c7e;
+    --l-g-r-color-3: #23a6d5;
+    --l-g-r-color-4: #23d5ab;
+}
+
+.fixed-bottom {
+    position: absolute;
+}
+
+.filter-bg {
+    border: 0;
+    box-shadow: none;
+}
+
+#login-svg {
+    position: absolute;
+}
+
+input[id^="login-entry-"] {
+    width: 100%;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input[id^="login-entry-"]:not(:placeholder-shown) {
+    font-weight: bold;
+    color: #808080;
+}
+
+div[id^="login-form-label-"] {
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    padding-right: calc(var(--bs-gutter-x)*0.20);
+    padding-left: calc(var(--bs-gutter-x)*0.20);
+}
+
+[id^="login-form-button-"] {
+    padding-right: calc(var(--bs-gutter-x)*2);
+    padding-left: calc(var(--bs-gutter-x)*2);
+    border-radius: 20px;
+    color: white;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    --l-g-r-color-1: black;
+    --l-g-r-color-2: black;
+    --l-g-r-color-3: black;
+    --l-g-r-color-4: black;
+    transition: var(--a) 0.5s 0.1s;
+    background: linear-gradient(var(--a), var(--l-g-r-color-1), var(--l-g-r-color-2), var(--l-g-r-color-3), var(--l-g-r-color-4));
+    background-size: 200% 200%;
+    animation: login-gradient 10s ease infinite;
+}
+
+.passwd-merge {
+    padding: 8px 0 0 0;
+    margin: 0;
+}
+
+.passwd-merge #login-entry-pass {
+    width: 83.33333333%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.passwd-merge #pass-eye {
+    padding: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+[id^="login-form-button-"]:hover {
+    --l-g-r-color-1: #ee7752;
+    --l-g-r-color-2: #e73c7e;
+    --l-g-r-color-3: #23a6d5;
+    --l-g-r-color-4: #23d5ab;
+}
+
+.login-form-button-background {
+    padding: 3px;
+    border-radius: 20px;
+    transition: var(--a) 0.5s 0.1s;
+    background: linear-gradient(var(--a), var(--l-g-r-color-1), var(--l-g-r-color-2), var(--l-g-r-color-3), var(--l-g-r-color-4));
+    background-size: 200% 200%;
+    animation: login-gradient 10s ease infinite;
+}
+
+.navbar {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.summer-chard-outline {
+    backdrop-filter: blur(6px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid;
+    padding-bottom: 5px;
+}
+
+.summer-chard-hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+tbody tr:not([deactive-coin]):nth-child(even) {
+    background-color: #dddddd46;
+    backdrop-filter: blur(6px);
+}
+
+[deactive-coin] {
+    background-color: #da252546;
+    backdrop-filter: blur(6px);
+}
+
+
+/* Coin list visu */
+
+tbody[id="coin-info-table-body"] em {
+    background-color: #833d8a;
+}
+
+tbody[id="coin-info-table-body"] .raise::after {
+    font: var(--fa-font-solid);
+    font-weight: 900;
+    content: " \f102";
+    color: green;
+}
+
+tbody[id="coin-info-table-body"] .fall::after {
+    font: var(--fa-font-solid);
+    content: " \f103";
+    font-weight: 900;
+    color: red;
+}
+
+table[id="coin-info-table"] {
+    display: block;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+#inp-headers th {
+    cursor: pointer;
+}
+
+input#coin-info-search {
+    width: 100%;
+}
+
+.navbar-brand {
+    transition: var(--a) 0.5s 0.1s;
+    background: linear-gradient(var(--a), var(--l-g-r-color-1), var(--l-g-r-color-2), var(--l-g-r-color-3), var(--l-g-r-color-4));
+    background-size: 200% 200%;
+    animation: login-gradient 10s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+}
+
+#contain {
+    padding-top: 70px;
+}
+
+a[con^="ajax"] {
+    cursor: pointer;
+}
+
+input[id^="login-entry-"]:focus {
+    background: linear-gradient(to right, #ffe4ed 0%, #569dc6 100%);
+    outline: none;
+}
+
+#login-form-label-type {
+    background: linear-gradient(to right, #569dc6 0%, #bba4c2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#login-form-label-error {
+    background: linear-gradient(to right, #f00 0%, #4b2441 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#login-form-labels,
+#login-form-buttons {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: calc(var(--bs-gutter-x)*0.20);
+    padding-left: calc(var(--bs-gutter-x)*0.20);
+}
+
+.login-form-inside {
+    max-height: 75%;
+    width: 75%;
+    margin: 0;
+    padding: 0;
+}
+
+.login-form-out {
+    padding: 50px;
+    margin: -50px;
+    height: 350px;
+    width: 350px;
+    position: relative;
+}
+
+.login-form-background {
+    position: absolute;
+    clip-path: url(#loginClip);
+    height: 100%;
+    width: 100%;
+    transition: var(--a) 0.5s 0.1s;
+    background: linear-gradient(var(--a), var(--l-g-r-color-1), var(--l-g-r-color-2), var(--l-g-r-color-3), var(--l-g-r-color-4));
+    background-size: 200% 200%;
+    animation: login-gradient 10s ease infinite;
+}
+
+@keyframes login-gradient {
+    0% {
+        background-position: 0% 50%;
+        --a: 0deg;
+    }
+    50% {
+        background-position: 100% 50%;
+        --a: 180deg;
+    }
+    100% {
+        background-position: 0% 50%;
+        --a: 360deg;
+    }
+}
+
+.bottom-left-name {
+    display: none;
+}
+
+
+/* Small -sm */
+
+@media(min-width: 576px) {
+    .login-form-out {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+
+/* Medium md */
+
+@media(min-width: 768px) {
+    .login-form-out {
+        height: 450px;
+        width: 450px;
+    }
+    .bottom-left-name {
+        display: block;
+    }
+}
+
+
+/* Large lg */
+
+@media(min-width: 992px) {}
+
+
+/* Extra large xl */
+
+@media(min-width: 1200px) {}
+
+@media(min-width: 1400px) {}
+
+[data-tip],
+[deactive-coin] {
+    position: relative;
+}
+
+
+/*hides the tooltip when not hovered*/
+
+[data-tip]:before {
+    content: '';
+    display: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #1a1a1a;
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    z-index: 8;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+}
+
+[deactive-coin]:after {
+    content: attr(deactive-coin);
+    background: #833d8a;
+}
+
+[data-tip]:after {
+    content: attr(data-tip);
+    background: #1a1a1a;
+}
+
+[data-tip]:after,
+[deactive-coin]:after {
+    display: none;
+    position: absolute;
+    top: -35px;
+    left: 0px;
+    padding: 5px 8px;
+    color: #fff;
+    z-index: 9;
+    height: 30px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+[data-tip]:hover:before,
+[data-tip]:hover:after,
+[deactive-coin]:hover:after {
+    display: block;
+}

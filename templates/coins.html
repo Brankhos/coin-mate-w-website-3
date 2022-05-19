@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="İstediğiniz ayarlamalar ile gelen sinyallerde alır veya satar">
+    <title>Coinler - CoinMate</title>
+
+
+    <link href="{{ url_for('static', filename='/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/css/fontawesome.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/css/main.css')}}" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div id="main" class="container-fluid h-100">
+
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand">CoinMate</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" con="ajax">Özet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" con="ajax">Coinler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" con="ajax">
+                                Pozisyonlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text"> Navbar text with an inline element </span>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        User_Name
+    </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" con="ajax">Hesap</a></li>
+                                <li><a class="dropdown-item" con="ajax">JSON</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" con="ajax">Çıkış</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="contain" class="container h-100">
+            <div class="row h-100 row-cols-1 justify-content-center">
+                <table id="coin-info-table">
+                    <thead>
+                        <tr>
+                            <th colspan="12">
+                                ÖNEMLİ: Sözleşme tipi PERPETUAL, durumu TRADING, türü COIN, teklif varlığı USDT olan coinler aşağıda listelenecek ve bot tarafından işleme girilebilir olacak.
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><input id="coin-info-search" type="text" placeholder="Sembol.."> </th>
+                            <th><input id="coin-info-search" type="number" placeholder="Fiyat.."><select id="coin-info-search" name="compare"><option value="1">büyük ise</option><option value="-1">küçük ise</option></select> </th>
+                            <th><input id="coin-info-search" type="number" placeholder="Fiyat Değişim.."><select id="coin-info-search" name="compare"><option value="1">büyük ise</option><option value="-1">küçük ise</option></select> </th>
+                            <th><input id="coin-info-search" type="number" placeholder="24h Hacim.."><select id="coin-info-search" name="compare"><option value="1">büyük ise</option><option value="-1">küçük ise</option></select> </th>
+                            <th><input id="coin-info-search" type="number" placeholder="Hacim ölçer.."><select id="coin-info-search" name="compare"><option value="1">büyük ise</option><option value="-1">küçük ise</option></select> </th>
+                            <th><input id="coin-info-search" type="text" placeholder="Alt Tür.."> </th>
+                            <th><input id="coin-info-search" type="date" placeholder="Tahtaya Giriş.."> <select id="coin-info-search" name="compare"><option value="-1">önce ise</option><option value="1">sonra ise</option></select> </th>
+                        </tr>
+
+                        <tr id="inp-headers">
+                            <th>Sembol</th>
+                            <th>Fiyat</th>
+                            <th>Fiyat Değişim</th>
+                            <th>24h Hacim</th>
+                            <th>Hacim Ölçer</th>
+                            <th>Alt Tür</th>
+                            <th>Tahtaya Giriş</th>
+                        </tr>
+                    </thead>
+                    <tbody id="coin-info-table-body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <footer class="fixed-bottom">
+        <!--
+        <div class="container">
+        <div class="bottom-left-name text-end">
+            &copy; Powered by <a href="https://github.com/Brankhos">Brankhos</a>
+        </div>
+        </div>
+        -->
+        <script src="{{ url_for('static', filename='/js/jquery-3.6.0.js')}}"></script>
+        <script src="{{ url_for('static', filename='/js/jquery.sparkline.js')}}"></script>
+        <script src="{{ url_for('static', filename='/js/bootstrap.bundle.js')}}"></script>
+        <script src="{{ url_for('static', filename='/js/main.js')}}"></script>
+
+    </footer>
+
+</body>
+
+</html>

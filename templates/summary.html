@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="İstediğiniz ayarlamalar ile gelen sinyallerde alır veya satar">
+    <title>Özet - CoinMate</title>
+
+
+    <link href="{{ url_for('static', filename='/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/css/fontawesome.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/css/main.css')}}" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div id="main" class="container-fluid h-100">
+
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand">CoinMate</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" con="ajax">Özet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" con="ajax">Coinler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" con="ajax">
+                                Pozisyonlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text"> Navbar text with an inline element </span>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        User_Name
+    </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" con="ajax">Hesap</a></li>
+                                <li><a class="dropdown-item" con="ajax">JSON</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" con="ajax">Çıkış</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="contain" class="container h-100">
+            <div class="row h-100 row-cols-1 align-items-evenly justify-content-center">
+                <div class="col-md-7 col-lg-6 col-xl-5 col-xxl-4 d-flex align-items-center d-flex align-items-center">
+                    <div class="row g-2 row-cols-1 summer-chard-outline">
+                        <div class="col text-center">Botlar</div>
+                        <hr class="summer-chard-hr">
+                        <div class="col">
+                            <div class="row g-2 row-cols-3 justify-content-evenly">
+
+                                <div class="col text-center">Long 1</div>
+                                <div class="col text-center">Aktif değil</div>
+                                <div class="col text-center">Aktif et</div>
+
+                                <div class="col text-center">Long 2</div>
+                                <div class="col text-center">Aktif</div>
+                                <div class="col text-center">Devredışı bırak</div>
+
+                                <div class="col text-center">Short 1</div>
+                                <div class="col text-center">Aktif değil</div>
+                                <div class="col text-center">Aktif et</div>
+
+                                <div class="col text-center">Short 2</div>
+                                <div class="col text-center">Aktif</div>
+                                <div class="col text-center">Devredışı bırak</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center">
+                    <div class="row g-2 row-cols-1 row-cols-md-2 row-cols-xxl-4">
+                        <div class="col">
+                            <div class="row g-2 row-cols-1 summer-chard-outline">
+                                <div class="col text-center">Son 24 saat</div>
+                                <hr class="summer-chard-hr">
+                                <div class="col">
+                                    <div class="row justify-content-evenly">
+                                        <div class="col-6 d-flex">
+                                            <div class="row row-cols-2">
+                                                <div class="col">Başarılı</div>
+                                                <div class="col text-center">18</div>
+                                                <div class="col">Başarısız</div>
+                                                <div class="col text-center">6</div>
+                                                <div class="col">Toplam</div>
+                                                <div class="col text-center">24</div>
+                                                <div class="col text-nowrap">Başarı oranı</div>
+                                                <div class="col text-center">%75</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto d-flex">
+                                            <div class="row">
+                                                <span class="col d-flex align-items-center justify-content-center dynamicsparkline"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col text-center">Tüm işlemlerin yüzdeleri
+                                </div>
+                                <hr class="summer-chard-hr">
+                                <div class="col">
+                                    <div class="row row-cols-3 justify-content-evenly">
+                                        <div class="col text-center">Tür</div>
+                                        <div class="col text-center">Toplam</div>
+                                        <div class="col text-center">Ort</div>
+
+                                        <div class="col text-center">Başarılı</div>
+                                        <div class="col text-center">%250</div>
+                                        <div class="col text-center">%13.3</div>
+
+                                        <div class="col text-center">Başarısız</div>
+                                        <div class="col text-center">%120</div>
+                                        <div class="col text-center">%6</div>
+
+                                        <div class="col text-center">Genel</div>
+                                        <div class="col text-center">%130</div>
+                                        <div class="col text-center">%5.41</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row g-2 row-cols-1 summer-chard-outline">
+                                <div class="col text-center">Son 24 saat</div>
+                                <hr class="summer-chard-hr">
+                                <div class="col">
+                                    <div class="row justify-content-evenly">
+                                        <div class="col-6 d-flex">
+                                            <div class="row row-cols-2">
+                                                <div class="col">Başarılı</div>
+                                                <div class="col text-center">18</div>
+                                                <div class="col">Başarısız</div>
+                                                <div class="col text-center">6</div>
+                                                <div class="col">Toplam</div>
+                                                <div class="col text-center">24</div>
+                                                <div class="col text-nowrap">Başarı oranı</div>
+                                                <div class="col text-center">%75</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto d-flex">
+                                            <div class="row">
+                                                <span class="col d-flex align-items-center justify-content-center dynamicsparkline"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col text-center">Tüm işlemlerin yüzdeleri
+                                </div>
+                                <hr class="summer-chard-hr">
+                                <div class="col">
+                                    <div class="row row-cols-3 justify-content-evenly">
+                                        <div class="col text-center">Tür</div>
+                                        <div class="col text-center">Toplam</div>
+                                        <div class="col text-center">Ort</div>
+
+                                        <div class="col text-center">Başarılı</div>
+                                        <div class="col text-center">%250</div>
+                                        <div class="col text-center">%13.3</div>
+
+                                        <div class="col text-center">Başarısız</div>
+                                        <div class="col text-center">%120</div>
+                                        <div class="col text-center">%6</div>
+
+                                        <div class="col text-center">Genel</div>
+                                        <div class="col text-center">%130</div>
+                                        <div class="col text-center">%5.41</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row g-2 row-cols-1 summer-chard-outline">
+                                <div class="col text-center">Son 24 saat</div>
+                                <hr class="summer-chard-hr">
+                                <div class="col">
+                                    <div class="row justify-content-evenly">
+                                        <div class="col-6 d-flex">
+                                            <div class="row row-cols-2">
+                                                <div class="col">Başarılı</div>
+                                                <div class="col text-center">18</div>
+                                                <div class="col">Başarısız</div>
+                                                <div class="col text-center">6</div>
+                                                <div class="col">Toplam</div>
+                                                <div class="col text-center">24</div>
+                                                <div class="col text-nowrap">Başarı oranı</div>
+                                                <div class="col text-center">%75</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto d-flex">
+                                            <div class="row">
+                                                <span class="col d-flex align-items-center justify-content-center dynamicsparkline"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col text-center">Tüm işlemlerin yüzdeleri
+                                </div>
+                                <hr class="summer-chard-hr">
+                                <div class="col">
+                                    <div class="row row-cols-3 justify-content-evenly">
+                                        <div class="col text-center">Tür</div>
+                                        <div class="col text-center">Toplam</div>
+                                        <div class="col text-center">Ort</div>
+
+                                        <div class="col text-center">Başarılı</div>
+                                        <div class="col text-center">%250</div>
+                                        <div class="col text-center">%13.3</div>
+
+                                        <div class="col text-center">Başarısız</div>
+                                        <div class="col text-center">%120</div>
+                                        <div class="col text-center">%6</div>
+
+                                        <div class="col text-center">Genel</div>
+                                        <div class="col text-center">%130</div>
+                                        <div class="col text-center">%5.41</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row g-2 row-cols-1 summer-chard-outline">
+                                <div class="col text-center">Son 24 saat</div>
+                                <hr class="summer-chard-hr">
+                                <div class="col">
+                                    <div class="row justify-content-evenly">
+                                        <div class="col-6 d-flex">
+                                            <div class="row row-cols-2">
+                                                <div class="col">Başarılı</div>
+                                                <div class="col text-center">18</div>
+                                                <div class="col">Başarısız</div>
+                                                <div class="col text-center">6</div>
+                                                <div class="col">Toplam</div>
+                                                <div class="col text-center">24</div>
+                                                <div class="col text-nowrap">Başarı oranı</div>
+                                                <div class="col text-center">%75</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto d-flex">
+                                            <div class="row">
+                                                <span class="col d-flex align-items-center justify-content-center dynamicsparkline"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col text-center">Tüm işlemlerin yüzdeleri
+                                </div>
+                                <hr class="summer-chard-hr">
+                                <div class="col">
+                                    <div class="row row-cols-3 justify-content-evenly">
+                                        <div class="col text-center">Tür</div>
+                                        <div class="col text-center">Toplam</div>
+                                        <div class="col text-center">Ort</div>
+
+                                        <div class="col text-center">Başarılı</div>
+                                        <div class="col text-center">%250</div>
+                                        <div class="col text-center">%13.3</div>
+
+                                        <div class="col text-center">Başarısız</div>
+                                        <div class="col text-center">%120</div>
+                                        <div class="col text-center">%6</div>
+
+                                        <div class="col text-center">Genel</div>
+                                        <div class="col text-center">%130</div>
+                                        <div class="col text-center">%5.41</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <footer class="fixed-bottom">
+        <div class="container">
+            <div class="bottom-left-name text-end">
+                &copy; Powered by <a href="https://github.com/Brankhos">Brankhos</a>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='/js/jquery-3.6.0.js')}}"></script>
+        <script src="{{ url_for('static', filename='/js/jquery.sparkline.js')}}"></script>
+        <script src="{{ url_for('static', filename='/js/bootstrap.bundle.js')}}"></script>
+        <script src="{{ url_for('static', filename='/js/main.js')}}"></script>
+
+    </footer>
+
+</body>
+
+</html>
